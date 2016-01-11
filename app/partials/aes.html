@@ -1,0 +1,32 @@
+<div>
+
+  <div>
+    <form>
+      <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+        <input class="mdl-textfield__input" type="text" ng-model="aes.input" id="input" name="aes.input"/>
+        <label class="mdl-textfield__label" for="input"></label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+        <input class="mdl-textfield__input" type="text" ng-model="aes.key" id="key" name="aes.key"/>
+        <label class="mdl-textfield__label" for="key"></label>
+      </div>
+      <div>
+        <select class="" id="bits" name="bits" ng-model="aes.bit">
+          <option value="128">128</option>
+        </select>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="callEncrypt()">
+          encrypt
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ng-click="callDecrypt()">
+          decrypt
+        </button>
+      </div>
+
+      <textarea style="width: 100%" readonly id="output">{{output}}</textarea>
+    </form>
+
+
+  </div>
+
+
+</div>
