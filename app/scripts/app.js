@@ -4,29 +4,22 @@
 
 var utilApp = angular.module('utilApp', [
   'ngRoute',
-  //'phonecatAnimations',
-
   'utilControllers',
-  //'phonecatFilters',
   'utilServices'
 ]);
 
 utilApp.config(['$routeProvider',
-  function ($routeProvider) {
-    $routeProvider.
-    when('/urlencode', {
+  function($routeProvider) {
+    $routeProvider.when('/urlencode', {
       templateUrl: 'partials/urlencode.html',
       controller: 'UrlEncodeCtrl'
-    }).
-    when('/aes', {
+    }).when('/aes', {
       templateUrl: 'partials/aes.html',
       controller: 'AesCtrl'
-    }).
-    when('/md5', {
+    }).when('/md5', {
       templateUrl: 'partials/md5.html'
-      //controller: 'PhoneDetailCtrl'
-    }).
-    otherwise({
+      // controller: 'PhoneDetailCtrl'
+    }).otherwise({
       redirectTo: '/'
     });
   }]);
